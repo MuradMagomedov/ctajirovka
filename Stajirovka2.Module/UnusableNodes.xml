@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Application>
+  <Views Id="Views">
+    <ListView Id="OrderKind_ListView">
+      <Variants Id="Variants">
+        <Variant Id="@87c9d529-9634-4eba-9da0-6be3b9e81be5" ViewID="OrderKind_TreeView" Index="1" Caption="Виды заказаИеарархия" />
+      </Variants>
+    </ListView>
+  </Views>
+</Application>

@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Application>
+  <Views>
+    <DetailView Id="RuleSetValidationResult_ByTarget_Error_DetailView">
+      <Items>
+        <StaticText Id="ValidationResultsText" Text="При контроле данных обнаружены проблемы. Информация об ошибках и способах их устранения приведена ниже." />
+      </Items>
+    </DetailView>
+    <DetailView Id="ValidationResults_Error_DetailView">
+      <Items>
+        <StaticText Id="ValidationResultsText" Text="При контроле данных обнаружены проблемы. Информация об ошибках и способах их устранения приведена ниже." />
+      </Items>
+    </DetailView>
+    <DetailView Id="ValidationResults_Passed_DetailView">
+      <Items>
+        <StaticText Id="ValidationResultsText" Text="При контроле данных проблем не выявлено." />
+      </Items>
+    </DetailView>
+  </Views>
+</Application>

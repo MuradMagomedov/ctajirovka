@@ -1,0 +1,796 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Xafari.BC.DC</name>
+    </assembly>
+    <members>
+        <member name="F:ProductInfo.IdentityVersion">
+            <summary>
+            This version used in code to identity product
+            </summary>
+        </member>
+        <member name="T:Xafari.BC.DC.DisplayNameExpressionAttribute">
+            <summary>
+            Specifies a display name <a href="https://documentation.devexpress.com/#WindowsForms/CustomDocument6211">expression</a>.
+            </summary>
+        </member>
+        <member name="P:Xafari.BC.DC.DisplayNameExpressionAttribute.DisplayNameExpression">
+            <summary>
+            Gets a display name expression.
+            </summary>
+        </member>
+        <member name="M:Xafari.BC.DC.DisplayNameExpressionAttribute.#ctor(System.String)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Xafari.BC.DC.DisplayNameExpressionAttribute"/>.
+            </summary>
+            <param name="displayNameExpression">Use <a href="https://documentation.devexpress.com/#WindowsForms/CustomDocument6211"> DevExpress Expressions</a> syntax to define display name.</param>
+        </member>
+        <member name="T:Xafari.BC.DC.DisplayNameFormatAttribute">
+            <summary>
+            Specifies a display name format.
+            </summary>
+        </member>
+        <member name="P:Xafari.BC.DC.DisplayNameFormatAttribute.DisplayNameFormat">
+            <summary>
+            Gets a display name format.
+            </summary>
+        </member>
+        <member name="M:Xafari.BC.DC.DisplayNameFormatAttribute.#ctor(System.String)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Xafari.BC.DC.DisplayNameFormatAttribute"/>.
+            </summary>
+            <param name="displayNameFormat">Use <see cref="T:Xafari.BC.Utils.XafariObjectFormatter"/> syntax to define format.</param>
+        </member>
+        <member name="T:Xafari.BC.DC.HierarchyNode">
+            <summary>
+            Base domain component for hierarchical data.
+            </summary>
+        </member>
+        <member name="T:Xafari.BC.DC.HierarchyNodeExt">
+            <summary>
+            Base domain component for hierarchical data. 
+            Additionally declares <see cref="P:Xafari.BC.DC.HierarchyNodeExt.HierarchyFullName"/> and <see cref="P:Xafari.BC.DC.HierarchyNodeExt.HierarchyFullPath"/> properties for default hierarchy.
+            </summary>
+        </member>
+        <member name="P:Xafari.BC.DC.HierarchyNodeExt.HierarchyFullName">
+            <summary>
+            Full name of the node for default hierarchy.
+            </summary>
+        </member>
+        <member name="P:Xafari.BC.DC.HierarchyNodeExt.HierarchyFullPath">
+            <summary>
+            Full path of the node for default hierarchy.
+            </summary>
+        </member>
+        <member name="E:Xafari.BC.DC.Logics.HierarchyNodeLogic.Events.HierarchyDeleting">
+            <summary>
+            Occurs before cascade delete for all hierarchies.
+            </summary>
+        </member>
+        <member name="T:Xafari.BC.DC.ISystemIdSupport">
+            <summary>
+            Declares a system identifier
+            </summary>
+        </member>
+        <member name="P:Xafari.BC.DC.ISystemIdSupport.SystemId">
+            <summary>
+            System identifier
+            </summary>
+        </member>
+        <member name="P:Xafari.BC.DC.ISystemIdSupport.IsSystem">
+            <summary>
+            Declares that object is system and can't be modified
+            </summary>
+        </member>
+        <member name="T:Xafari.BC.DC.NameSupport">
+            <summary>
+            Interface declares the use of Name.
+            </summary>
+        </member>
+        <member name="P:Xafari.BC.DC.NameSupport.Name">
+            <summary>
+            Gets and sets object name.
+            </summary>
+        </member>
+        <member name="T:Xafari.BC.DC.TagsSupport">
+            <summary>
+            Interface declares the use of Tags.
+            </summary>
+        </member>
+        <member name="P:Xafari.BC.DC.TagsSupport.Tags">
+            <summary>
+            Gets and sets object tags.
+            </summary>
+        </member>
+        <member name="T:Xafari.BC.DC.XafariObject">
+            <summary>
+            Base object for all business objects.
+            </summary>
+        </member>
+        <member name="T:Xafari.BC.DC.AddNoteViewController">
+            <summary>
+            Allow to create notes(comments).
+            </summary>
+        </member>
+        <member name="F:Xafari.BC.DC.AddNoteViewController.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:Xafari.BC.DC.AddNoteViewController.Dispose(System.Boolean)">
+            <summary> 
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:Xafari.BC.DC.AddNoteViewController.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="T:Xafari.BC.DC.AsStringSupport">
+            <summary>
+            String representation of the object.
+            </summary>
+        </member>
+        <member name="P:Xafari.BC.DC.AsStringSupport.AsString">
+            <summary>
+            String representation.
+            </summary>
+        </member>
+        <member name="P:Xafari.BC.DC.AsStringSupport.AsStringFormat">
+            <summary>
+            String representation format.
+            </summary>
+        </member>
+        <member name="T:Xafari.BC.DC.PersistentAsString">
+            <summary>
+            Persistent string representation of the object.
+            </summary>
+        </member>
+        <member name="T:Xafari.BC.DC.AuditSupport">
+            <summary>
+            Base domain component to objects, that support audit.
+            </summary>
+        </member>
+        <member name="T:Xafari.BC.DC.ClassifierItem">
+            <summary>
+            Base classifier item.
+            </summary>
+            <remarks>
+            For string representation used format: "[Code] Name".
+            </remarks>
+        </member>
+        <member name="T:Xafari.BC.DC.PersistentClassifierItem">
+            <summary>
+            Persistent base classifier item.
+            </summary>
+            <remarks>
+            Used for internal purpose.
+            </remarks>
+        </member>
+        <member name="T:Xafari.BC.DC.DCCloner">
+            <summary>
+            Реализует сервис создания копии Domain Component
+            </summary>
+        </member>
+        <member name="T:Xafari.BC.DC.Document">
+            <summary>
+            Document.
+            </summary>
+        </member>
+        <member name="T:Xafari.BC.DC.IDocumentBase">
+            <summary>
+            Base domain component for document.
+            </summary>
+        </member>
+        <member name="P:Xafari.BC.DC.IDocumentBase.DocDate">
+            <summary>
+            Document date.
+            </summary>
+        </member>
+        <member name="T:Xafari.BC.DC.PersistentDocument">
+            <summary>
+            Persistent document.
+            </summary>
+        </member>
+        <member name="T:Xafari.BC.DC.TitleSupport">
+            <summary>
+            Interface declares the use of Title.
+            </summary>
+        </member>
+        <member name="P:Xafari.BC.DC.TitleSupport.Title">
+            <summary>
+            Gets and sets object Title.
+            </summary>
+        </member>
+        <member name="T:Xafari.BC.DC.IsServiceSupport">
+            <summary>
+            This interface declares the use a Title.
+            </summary>
+        </member>
+        <member name="P:Xafari.BC.DC.IsServiceSupport.IsService">
+            <summary>
+            Gets and sets the value indicating if current object contains special service information.
+            </summary>
+        </member>
+        <member name="T:Xafari.BC.DC.CodeSupport">
+            <summary>
+            Interface declares the use of Code.
+            </summary>
+        </member>
+        <member name="P:Xafari.BC.DC.CodeSupport.Code">
+            <summary>
+            Gets and sets object code.
+            </summary>
+        </member>
+        <member name="T:Xafari.BC.DC.FullNameSupport">
+            <summary>
+            This interface declares the use a FullName.
+            </summary>
+        </member>
+        <member name="P:Xafari.BC.DC.FullNameSupport.FullName">
+            <summary>
+            Gets and sets a code of object.
+            </summary>
+        </member>
+        <member name="T:Xafari.BC.DC.DisplayNameSupport">
+            <summary>
+            This interface declares the use a DisplayName.
+            </summary>
+        </member>
+        <member name="P:Xafari.BC.DC.DisplayNameSupport.DisplayName">
+            <summary>
+            Gets and sets object DisplayName.
+            </summary>
+        </member>
+        <member name="P:Xafari.BC.DC.DisplayNameSupport.DisplayNameFormat">
+            <summary>
+            String representation format.
+            Use <see cref="T:Xafari.BC.Utils.XafariObjectFormatter"/> syntax to define format.
+            </summary>
+        </member>
+        <member name="M:Xafari.BC.DC.DisplayNameSupport.UpdateDisplayNameValue">
+            <summary>
+            Update string reppresentation.
+            </summary>
+        </member>
+        <member name="T:Xafari.BC.DC.IndexSupport">
+            <summary>
+            Interface declares the use of Index.
+            </summary>
+        </member>
+        <member name="P:Xafari.BC.DC.IndexSupport.Index">
+            <summary>
+            Gets and sets object index.
+            </summary>
+        </member>
+        <member name="T:Xafari.BC.DC.OwnerSupport">
+            <summary>
+            This interface declares Owner property.
+            </summary>
+        </member>
+        <member name="P:Xafari.BC.DC.OwnerSupport.Owner">
+            <summary>
+            Gets and sets object owner.
+            </summary>
+        </member>
+        <member name="T:Xafari.BC.DC.CreateDateSupport">
+            <summary>
+            Describes object creation date.
+            </summary>
+        </member>
+        <member name="P:Xafari.BC.DC.CreateDateSupport.CreationDate">
+            <summary>
+            Gets and sets object date.
+            </summary>
+        </member>
+        <member name="T:Xafari.BC.DC.ShortNameSupport">
+            <summary>
+            Interface declares the use of ShortName.
+            </summary>
+        </member>
+        <member name="P:Xafari.BC.DC.ShortNameSupport.ShortName">
+            <summary>
+            Gets and sets object short name.
+            </summary>
+        </member>
+        <member name="T:Xafari.BC.DC.DescriptionSupport">
+            <summary>
+            Interface declares the use of Description.
+            </summary>
+        </member>
+        <member name="P:Xafari.BC.DC.DescriptionSupport.Description">
+            <summary>
+            Gets and sets object description.
+            </summary>
+        </member>
+        <member name="T:Xafari.BC.DC.NumberSupport">
+            <summary>
+            Interface declares the use of Number.
+            </summary>
+        </member>
+        <member name="P:Xafari.BC.DC.NumberSupport.Number">
+            <summary>
+            Gets and sets object number.
+            </summary>
+        </member>
+        <member name="T:Xafari.BC.DC.PeriodDateSupport">
+            <summary>
+            This interface declares the period.
+            </summary>
+        </member>
+        <member name="P:Xafari.BC.DC.PeriodDateSupport.StartDate">
+            <summary>
+            Period start date.
+            </summary>
+        </member>
+        <member name="P:Xafari.BC.DC.PeriodDateSupport.EndDate">
+            <summary>
+            Period end date.
+            </summary>
+        </member>
+        <member name="T:Xafari.BC.DC.NameReadOnlySupport">
+            <summary>
+            Interface declares the use of read only field Name.
+            </summary>
+        </member>
+        <member name="P:Xafari.BC.DC.NameReadOnlySupport.Name">
+            <summary>
+            Gets object name.
+            </summary>
+        </member>
+        <member name="T:Xafari.BC.DC.ModifyDateSupport">
+            <summary>
+            Interface declares the use of ModifyDate.
+            </summary>
+        </member>
+        <member name="P:Xafari.BC.DC.ModifyDateSupport.ModifyDate">
+            <summary>
+            Gets and sets object modify date.
+            </summary>
+        </member>
+        <member name="T:Xafari.BC.DC.ImageNameSupport">
+            <summary>
+            Interface declares the use of ImageName.
+            </summary>
+        </member>
+        <member name="P:Xafari.BC.DC.ImageNameSupport.ImageName">
+            <summary>
+            Gets and sets image name.
+            </summary>
+        </member>
+        <member name="T:Xafari.BC.DC.OwnerTypeSupport">
+            <summary>
+            Interface declares the use of OwnerType.
+            </summary>
+        </member>
+        <member name="P:Xafari.BC.DC.OwnerTypeSupport.OwnerType">
+            <summary>
+            Gets and sets object owner type.
+            </summary>
+        </member>
+        <member name="T:Xafari.BC.DC.CurrentHierarchyProvider">
+            <summary>
+            Provides support for multiple hierarchies for class.
+            </summary>
+        </member>
+        <member name="P:Xafari.BC.DC.CurrentHierarchyProvider.CurrentHierarchyName">
+            <summary>
+            Gets and sets the current object hierarchy.
+            </summary>
+            <remarks>
+            Used when switching hierarchies in ListView.
+            </remarks>
+        </member>
+        <member name="T:Xafari.BC.DC.HierarchicalClassifierItem">
+            <summary>
+            Hierarchical classifier item..
+            </summary>
+            <remarks>
+            Released FullName for hierarchy by default. 
+            To maintain multiple FullName should add fields to store these values 
+            and set attribute <see cref="T:Xafari.BC.HierarchicalData.HierarchyFullNamePropertyAttribute"/>.
+            </remarks>
+        </member>
+        <member name="M:Xafari.BC.DC.HierarchicalClassifierItem.UpdateFullNameValue(System.String)">
+            <summary>
+            For internal use only.
+            Used for automatically update the field <see cref="P:Xafari.BC.DC.HierarchyNodeExt.HierarchyFullName"/>, for example, when the field changes <see cref="!:ClassifierItem.Name"/>.
+            </summary>
+            <param name="separator"></param>
+        </member>
+        <member name="T:Xafari.BC.DC.PersistentHierarchicalClassifierItem">
+            <summary>
+            For internal use.
+            </summary>
+        </member>
+        <member name="T:Xafari.BC.DC.HistoryInfo">
+            <summary>
+            Object history information.
+            </summary>
+        </member>
+        <member name="P:Xafari.BC.DC.HistoryInfo.HistoryCreate">
+            <summary>
+            Object created.
+            </summary>
+        </member>
+        <member name="P:Xafari.BC.DC.HistoryInfo.HistoryModify">
+            <summary>
+            Object modified.
+            </summary>
+        </member>
+        <member name="T:Xafari.BC.DC.PersistentHistoryInfo">
+            <summary>
+            Persistent object history information.
+            </summary>
+        </member>
+        <member name="T:Xafari.BC.DC.LineObject">
+            <summary>
+            Base object for specifications.
+            </summary>
+        </member>
+        <member name="T:Xafari.BC.DC.ModelPathSupport">
+            <summary>
+            Heirs must contain the path to the element in the model.
+            </summary>
+        </member>
+        <member name="P:Xafari.BC.DC.ModelPathSupport.ModelId">
+            <summary>
+            Model path.
+            </summary>
+        </member>
+        <member name="T:Xafari.BC.DC.DynamicProperties.DynamicObjectBase">
+            <summary>
+            Base domain component that supports dynamic properties.
+            </summary>
+        </member>
+        <member name="P:Xafari.BC.DC.DynamicProperties.DynamicObjectBase.Dpo">
+            <summary>
+            Dynamic properties object that allow to modify properties.
+            </summary>
+        </member>
+        <member name="T:Xafari.BC.DC.DynamicProperties.PersistentDynamicObject">
+            <summary>
+            For internal use.
+            </summary>
+        </member>
+        <member name="T:Xafari.BC.DC.DynamicProperties.DCDynamicObjectBaseExtensions">
+            <summary>
+            Extensions for working with dynamic properties.
+            </summary>
+        </member>
+        <member name="M:Xafari.BC.DC.DynamicProperties.DCDynamicObjectBaseExtensions.GetDynamicPropertiesMember(DevExpress.ExpressApp.DC.ITypeInfo)">
+            <summary>
+            Get member that describes dynamic properties collection.
+            </summary>
+            <param name="typeInfo">Current ITypeInfo</param>
+            <returns>IMemberInfo that describes dynamic properties collection.</returns>
+        </member>
+        <member name="M:Xafari.BC.DC.DynamicProperties.DCDynamicObjectBaseExtensions.GetDynamicPropertiesOwnerMember(DevExpress.ExpressApp.DC.ITypeInfo)">
+            <summary>
+            Get member that describes dynamic properties collection owner.
+            </summary>
+            <param name="typeInfo">Current ITypeInfo</param>
+            <returns>IMemberInfo that describes dynamic properties collection owner.</returns>
+        </member>
+        <member name="F:Xafari.BC.DC.XafariBCDCModule.components">
+            <summary> 
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:Xafari.BC.DC.XafariBCDCModule.Dispose(System.Boolean)">
+            <summary> 
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:Xafari.BC.DC.XafariBCDCModule.InitializeComponent">
+            <summary> 
+            Required method for Designer support - do not modify 
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="T:Xafari.BC.DC.INotesSupport">
+            <summary>
+            Describes that object has notes collection.
+            </summary>
+        </member>
+        <member name="P:Xafari.BC.DC.INotesSupport.Notes">
+            <summary>
+            Notes collection.
+            </summary>
+        </member>
+        <member name="T:Xafari.BC.DC.INote">
+            <summary>
+            Base note interface.
+            </summary>
+        </member>
+        <member name="T:Xafari.BC.DC.NoteObject">
+            <summary>
+            Note(Comment). 
+            </summary>
+        </member>
+        <member name="P:Xafari.BC.DC.NoteObject.Parent">
+            <summary>
+            Parent note.
+            </summary>
+        </member>
+        <member name="P:Xafari.BC.DC.NoteObject.ChildrenNotes">
+            <summary>
+            Children notes.
+            </summary>
+        </member>
+        <member name="P:Xafari.BC.DC.NoteObject.Title">
+            <summary>
+            Note title.
+            </summary>
+        </member>
+        <member name="P:Xafari.BC.DC.NoteObject.Text">
+            <summary>
+            Note text.
+            </summary>
+        </member>
+        <member name="P:Xafari.BC.DC.NoteObject.AttachmentFile">
+            <summary>
+            Note attachment.
+            </summary>
+        </member>
+        <member name="P:Xafari.BC.DC.NoteObject.Author">
+            <summary>
+            Note creator.
+            </summary>
+        </member>
+        <member name="P:Xafari.BC.DC.NoteObject.ToEliminate">
+            <summary>
+            Indicates, that note text should be eliminated.
+            </summary>
+        </member>
+        <member name="P:Xafari.BC.DC.NoteObject.DisplayNameFormat">
+            <summary>
+            New note format.
+            </summary>
+        </member>
+        <member name="T:Xafari.BC.DC.PersistentNote">
+            <summary>
+            Persistent note.
+            </summary>
+        </member>
+        <member name="P:Xafari.BC.DC.PersistentNote.PersistentNoteParent">
+            <summary>
+            Persistent parent note.
+            </summary>
+        </member>
+        <member name="P:Xafari.BC.DC.PersistentNote.PersistentChildrenNotes">
+            <summary>
+            Children notes collection.
+            </summary>
+        </member>
+        <member name="P:Xafari.BC.DC.PersistentNote.PersistentNoteOwner">
+            <summary>
+            Persistent note owner.
+            </summary>
+        </member>
+        <member name="T:Xafari.BC.DC.NotesAttribute">
+            <summary>
+            Specifies a property that have notes collection.
+            </summary>
+        </member>
+        <member name="T:Xafari.BC.DC.NotesSupport">
+            <summary>
+            Notes owner.
+            </summary>
+        </member>
+        <member name="T:Xafari.BC.DC.PersistentNotesSupport">
+            <summary>
+            Persistent notes owner.
+            </summary>
+        </member>
+        <member name="P:Xafari.BC.DC.PersistentNotesSupport.PersistentNotes">
+            <summary>
+            Current object persistent notes collection.
+            </summary>
+        </member>
+        <member name="T:Xafari.BC.DC.ObjectState">
+            <summary>
+            State object.
+            </summary>
+        </member>
+        <member name="P:Xafari.BC.DC.ObjectState.ModifyStatus">
+            <summary>
+            Allow to modify status.
+            </summary>
+        </member>
+        <member name="P:Xafari.BC.DC.ObjectState.ReadOnly">
+            <summary>
+            Is state ReadOnly.
+            </summary>
+        </member>
+        <member name="P:Xafari.BC.DC.ObjectState.Name">
+            <summary>
+            State name.
+            </summary>
+        </member>
+        <member name="P:Xafari.BC.DC.ObjectState.Title">
+            <summary>
+            State title.
+            </summary>
+        </member>
+        <member name="P:Xafari.BC.DC.ObjectState.Status">
+            <summary>
+            Change status to selected.
+            </summary>
+        </member>
+        <member name="P:Xafari.BC.DC.ObjectState.ImageName">
+            <summary>
+            State image name.
+            </summary>
+        </member>
+        <member name="P:Xafari.BC.DC.ObjectState.OwnerType">
+            <summary>
+            State owner type.
+            </summary>
+        </member>
+        <member name="P:Xafari.BC.DC.ObjectState.Appearances">
+            <summary>
+            State appearances.
+            </summary>
+        </member>
+        <member name="P:Xafari.BC.DC.ObjectState.Appearance">
+            <summary>
+            Persistent state appearances.
+            </summary>
+        </member>
+        <member name="T:Xafari.BC.DC.StateAppearance">
+            <summary>
+            Describes appearance for state.
+            </summary>
+        </member>
+        <member name="P:Xafari.BC.DC.StateAppearance.State">
+            <summary>
+            Appearance for state.
+            </summary>
+        </member>
+        <member name="P:Xafari.BC.DC.StateAppearance.AppearanceItemType">
+            <summary>
+            Appearance item type.
+            </summary>
+        </member>
+        <member name="P:Xafari.BC.DC.StateAppearance.Context">
+            <summary>
+            Appearance context.
+            </summary>
+        </member>
+        <member name="P:Xafari.BC.DC.StateAppearance.Criteria">
+            <summary>
+            Appearance criteria.
+            </summary>
+        </member>
+        <member name="P:Xafari.BC.DC.StateAppearance.DeclaringType">
+            <summary>
+            Type for appearance criteria.
+            </summary>
+        </member>
+        <member name="P:Xafari.BC.DC.StateAppearance.Method">
+            <summary>
+            Appearance method.
+            </summary>
+        </member>
+        <member name="P:Xafari.BC.DC.StateAppearance.TargetItems">
+            <summary>
+            Appearance target items.
+            </summary>
+        </member>
+        <member name="P:Xafari.BC.DC.StateAppearance.BackColor">
+            <summary>
+            Appearance back color.
+            </summary>
+        </member>
+        <member name="P:Xafari.BC.DC.StateAppearance.Enabled">
+            <summary>
+            Appearance enabled.
+            </summary>
+        </member>
+        <member name="P:Xafari.BC.DC.StateAppearance.FontColor">
+            <summary>
+            Appearance font color.
+            </summary>
+        </member>
+        <member name="P:Xafari.BC.DC.StateAppearance.FontStyle">
+            <summary>
+            Appearance font style.
+            </summary>
+        </member>
+        <member name="P:Xafari.BC.DC.StateAppearance.Priority">
+            <summary>
+            Appearance priority.
+            </summary>
+        </member>
+        <member name="P:Xafari.BC.DC.StateAppearance.Visibility">
+            <summary>
+            Appearance visibility.
+            </summary>
+        </member>
+        <member name="T:Xafari.BC.DC.StateSupport">
+            <summary>
+            Describes the properties and methods for using object states.
+            </summary>
+        </member>
+        <member name="P:Xafari.BC.DC.StateSupport.DCCurrentState">
+            <summary>
+            Gets and sets current object state name.
+            </summary>
+        </member>
+        <member name="P:Xafari.BC.DC.StateSupport.States">
+            <summary>
+            All available object states.
+            </summary>
+        </member>
+        <member name="P:Xafari.BC.DC.StateSupport.CurrentState">
+            <summary>
+            Gets and sets current object state.
+            </summary>
+        </member>
+        <member name="T:Xafari.BC.DC.StateSupportBaseObject">
+            <summary>
+            Base object for objects that support states.
+            </summary>
+        </member>
+        <member name="E:Xafari.BC.DC.StateSupportBaseObject.CurrentStateChanged">
+            <summary>
+            Current state changed event.
+            </summary>
+        </member>
+        <member name="T:Xafari.BC.DC.StatusSupport">
+            <summary>
+            Describes the properties and methods for using object status.
+            </summary>
+        </member>
+        <member name="P:Xafari.BC.DC.StatusSupport.CurrentStatus">
+            <summary>
+            Gets and sets current object status.
+            </summary>
+        </member>
+        <member name="P:Xafari.BC.DC.StatusSupport.LastStatusModifyUser">
+            <summary>
+            Gets and sets user name, that last modify status.
+            </summary>
+        </member>
+        <member name="P:Xafari.BC.DC.StatusSupport.LastStatusModifyDate">
+            <summary>
+            Gets and sets the date of the last status change.
+            </summary>
+        </member>
+        <member name="P:Xafari.BC.DC.StatusSupport.StatusModify">
+            <summary>
+            Information about the last status change.
+            </summary>
+        </member>
+        <member name="T:Xafari.BC.DC.StatusSupportEx">
+            <summary>
+            Describes additional properties and methods for using object status.
+            </summary>
+        </member>
+        <member name="P:Xafari.BC.DC.StatusSupportEx.ExpirationDate">
+            <summary>
+            Gets and sets the date from which the business object will be considered obsolete and status changed to "Archive".
+            </summary>
+        </member>
+        <member name="P:Xafari.BC.DC.StatusSupportEx.ActualityPeriodStart">
+            <summary>
+            Contains and sets the start date relevance.
+            </summary>
+        </member>
+        <member name="P:Xafari.BC.DC.StatusSupportEx.ActualityPeriodEnd">
+            <summary>
+            Contains and sets the end date relevance.
+            </summary>
+        </member>
+        <member name="T:Xafari.BC.DC.ThisObjectSupport">
+            <summary>
+            Allows an object to manage himself through its field.
+            </summary>
+        </member>
+    </members>
+</doc>

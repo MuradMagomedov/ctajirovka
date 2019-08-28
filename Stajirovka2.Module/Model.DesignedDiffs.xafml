@@ -1,0 +1,66 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Application Title="Stajirovka2">
+  <NavigationItems>
+    <Items>
+      <Item Id="Стажировка">
+        <Items>
+          <Item Id="OrderMaterial_ListView" ImageName="" />
+          <Item Id="OrderStatus_ListView" Caption="Статус" ImageName="BO_State" />
+        </Items>
+      </Item>
+    </Items>
+  </NavigationItems>
+  <Options>
+    <LayoutManagerOptions RequiredFieldMark="*" />
+  </Options>
+  <SchemaModules>
+    <SchemaModule Name="SystemModule" Version="16.2.12.0" IsNewNode="True" />
+  </SchemaModules>
+  <Views>
+    <ListView Id="OrderKind_Children_ListView">
+      <Columns>
+        <ColumnInfo Id="Name" SortOrder="Ascending" />
+      </Columns>
+    </ListView>
+    <ListView Id="OrderKind_ListView" IsGroupPanelVisible="False" IsFooterVisible="True" EditorTypeName="">
+      <Columns>
+        <ColumnInfo Id="Parent" GroupIndex="1" />
+      </Columns>
+      <Variants>
+        <Variant Id="@41974712-f3d0-46a4-a0e5-4e33f69dc431" ViewID="OrderKind_TreeView" Caption="Виды заказа иерархия" IsNewNode="True" />
+        <Variant Id="@e32a31c9-ebda-4255-92ca-3fbfe9f5afb9" ViewID="OrderKind_ListView" Caption="Виды заказа список" IsNewNode="True" />
+      </Variants>
+    </ListView>
+    <ListView Id="OrderKind_TreeView" ClassName="Stajirovka2.Module.BusinessObjects.Stajirovka.OrderKind" IsFooterVisible="True" EditorTypeName="" IsNewNode="True">
+      <Columns IsNewNode="True">
+        <ColumnInfo Id="Oid" PropertyName="Oid" Width="70" Index="-1" IsNewNode="True" />
+        <ColumnInfo Id="Name" PropertyName="Name" Width="400" SortIndex="0" SortOrder="Ascending" Index="0" IsNewNode="True" />
+        <ColumnInfo Id="Code" PropertyName="Code" Width="70" Index="1" IsNewNode="True" />
+        <ColumnInfo Id="Parent" PropertyName="Parent" Width="70" Index="2" GroupIndex="1" IsNewNode="True" />
+      </Columns>
+      <Variants IsNewNode="True">
+        <Variant Id="@2a491648-8c10-4f01-9943-fe84d981a855" ViewID="OrderKind_ListView" IsNewNode="True" />
+      </Variants>
+    </ListView>
+    <ListView Id="OrderMaterial_ListView" IsFooterVisible="True">
+      <Columns>
+        <ColumnInfo Id="Material">
+          <Summary>
+            <ColumnSummaryItem Id="@02e8b990-1e61-4b22-8f0a-2e140f885820" SummaryType="Count" IsNewNode="True" />
+          </Summary>
+        </ColumnInfo>
+        <ColumnInfo Id="Qty">
+          <Summary>
+            <ColumnSummaryItem Id="@82de536a-8be2-4247-9173-2ae37bd9a015" SummaryType="Sum" IsNewNode="True" />
+          </Summary>
+        </ColumnInfo>
+      </Columns>
+    </ListView>
+    <ListView Id="OrderStatus_ListView">
+      <Columns>
+        <ColumnInfo Id="Code" SortIndex="0" SortOrder="Descending" Index="0" Width="246" />
+        <ColumnInfo Id="Name" Index="1" SortIndex="-1" SortOrder="None" />
+      </Columns>
+    </ListView>
+  </Views>
+</Application>

@@ -1,0 +1,110 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Application Logo="ExpressAppLogo">
+  <BOModel>
+    <Class Name="Stajirovka2.Module.BusinessObjects.Stajirovka.OrderMaterial" ObjectCaptionFormat="" />
+  </BOModel>
+  <NavigationItems>
+    <Items>
+      <Item Id="Стажировка">
+        <Items>
+          <Item Id="OrderKind_ListView" ViewId="OrderKind_ListView" />
+        </Items>
+      </Item>
+    </Items>
+  </NavigationItems>
+  <Options Skin="Visual Studio 2013 Blue" UIType="TabbedMDI" FormStyle="Ribbon">
+    <RibbonOptions RibbonControlStyle="Office2013" />
+  </Options>
+  <SchemaModules>
+    <SchemaModule Name="SystemModule" Version="16.2.12.0" IsNewNode="True" />
+    <SchemaModule Name="SystemWindowsFormsModule" Version="16.2.12.0" IsNewNode="True" />
+  </SchemaModules>
+  <Views>
+    <ListView Id="ExternalOrder_ListView">
+      <Columns>
+        <ColumnInfo Id="DateBegin" EditMaskType="DateTime" EditMask="dd.MM.yyyy" DisplayFormat="{0:dd.MM.yyyy}" />
+      </Columns>
+    </ListView>
+    <ListView Id="OrderKind_ListView" EditorTypeName="DevExpress.ExpressApp.TreeListEditors.Win.TreeListEditor" />
+    <DetailView Id="OrderMaterial_DetailView" CustomizationEnabled="False" Caption="&quot;НоменклатурнаяПозиция_Карточка&quot; (&quot;Основная НСИ/Номенклатура/Номенклатурные позиции" />
+    <ListView Id="OrderMaterial_ListGroupView" ClassName="Stajirovka2.Module.BusinessObjects.Stajirovka.OrderMaterial" IsFooterVisible="True" Criteria="[Number] &lt; 11" IsGroupPanelVisible="True" IsNewNode="True">
+      <Columns IsNewNode="True">
+        <ColumnInfo Id="Oid" PropertyName="Oid" Width="70" Index="-1" IsNewNode="True" />
+        <ColumnInfo Id="Number" PropertyName="Number" Width="50" Index="0" SortIndex="0" SortOrder="Ascending" IsNewNode="True" />
+        <ColumnInfo Id="Material" Index="1" PropertyName="Material" Width="70" IsNewNode="True">
+          <Summary IsNewNode="True">
+            <ColumnSummaryItem Id="@02e8b990-1e61-4b22-8f0a-2e140f885820" SummaryType="Count" IsNewNode="True" />
+          </Summary>
+        </ColumnInfo>
+        <ColumnInfo Id="Qty" Index="2" PropertyName="Qty" Width="50" IsNewNode="True">
+          <Summary IsNewNode="True">
+            <ColumnSummaryItem Id="@82de536a-8be2-4247-9173-2ae37bd9a015" SummaryType="Sum" IsNewNode="True" />
+          </Summary>
+        </ColumnInfo>
+        <ColumnInfo Id="Price" PropertyName="Price" Width="50" Index="3" SortOrder="Ascending" GroupIndex="0" IsNewNode="True">
+          <Summary IsNewNode="True">
+            <ColumnSummaryItem Id="@f5729540-525a-494d-8074-e643a29ea426" SummaryType="Min" IsNewNode="True" />
+          </Summary>
+        </ColumnInfo>
+        <ColumnInfo Id="Sum" PropertyName="Sum" Width="50" Index="4" IsNewNode="True" />
+        <ColumnInfo Id="OrderOperation" PropertyName="OrderOperation" Width="70" Index="5" IsNewNode="True" />
+      </Columns>
+      <Filters IsNewNode="True">
+        <Filter Id="qty&lt;50" Caption="наименование фильтра1" Criteria="[Qty] &lt; 50.0m" ToolTip="Количество меньше 50" IsNewNode="True" />
+      </Filters>
+      <Variants IsNewNode="True">
+        <Variant Id="@8454668f-1948-4f1b-9209-674cb035f5c2" ViewID="OrderMaterial_ListView" Caption="список" IsNewNode="True" />
+        <Variant Id="@da31d0e1-73f7-4a7b-9379-b62fe26d3c64" Caption="Группы" ViewID="OrderMaterial_ListView" IsNewNode="True" />
+      </Variants>
+    </ListView>
+    <ListView Id="OrderMaterial_ListView" Criteria="[Number] &lt; 11" AllowEdit="False">
+      <Columns>
+        <ColumnInfo Id="Number" SortIndex="0" SortOrder="Ascending" />
+        <ColumnInfo Id="Price">
+          <Summary>
+            <ColumnSummaryItem Id="@f5729540-525a-494d-8074-e643a29ea426" SummaryType="Min" IsNewNode="True" />
+          </Summary>
+        </ColumnInfo>
+      </Columns>
+      <Filters>
+        <Filter Id="qty&lt;50" Caption="наименование фильтра1" Criteria="[Qty] &lt; 50.0m" ToolTip="Количество меньше 50" IsNewNode="True" />
+      </Filters>
+      <Variants>
+        <Variant Id="@8454668f-1948-4f1b-9209-674cb035f5c2" ViewID="OrderMaterial_ListView" Caption="список" IsNewNode="True" />
+        <Variant Id="@da31d0e1-73f7-4a7b-9379-b62fe26d3c64" Caption="Группы" ViewID="OrderMaterial_ListGroupView" IsNewNode="True" />
+        <Variant Id="3" Caption="Сводная таблица" ViewID="OrderMaterial_Сводная_таблица" IsNewNode="True" />
+      </Variants>
+    </ListView>
+    <ListView Id="OrderMaterial_Сводная_таблица" ClassName="Stajirovka2.Module.BusinessObjects.Stajirovka.OrderMaterial" IsFooterVisible="True" Criteria="[Number] &lt; 11" IsNewNode="True">
+      <Columns IsNewNode="True">
+        <ColumnInfo Id="Oid" PropertyName="Oid" Width="70" Index="-1" IsNewNode="True" />
+        <ColumnInfo Id="Number" PropertyName="Number" Width="50" Index="0" SortIndex="0" SortOrder="Ascending" IsNewNode="True" />
+        <ColumnInfo Id="Material" Index="1" PropertyName="Material" Width="70" IsNewNode="True">
+          <Summary IsNewNode="True">
+            <ColumnSummaryItem Id="@02e8b990-1e61-4b22-8f0a-2e140f885820" SummaryType="Count" IsNewNode="True" />
+          </Summary>
+        </ColumnInfo>
+        <ColumnInfo Id="Qty" Index="2" PropertyName="Qty" Width="50" IsNewNode="True">
+          <Summary IsNewNode="True">
+            <ColumnSummaryItem Id="@82de536a-8be2-4247-9173-2ae37bd9a015" SummaryType="Sum" IsNewNode="True" />
+          </Summary>
+        </ColumnInfo>
+        <ColumnInfo Id="Price" PropertyName="Price" Width="50" Index="3" IsNewNode="True">
+          <Summary IsNewNode="True">
+            <ColumnSummaryItem Id="@f5729540-525a-494d-8074-e643a29ea426" SummaryType="Min" IsNewNode="True" />
+          </Summary>
+        </ColumnInfo>
+        <ColumnInfo Id="Sum" PropertyName="Sum" Width="50" Index="4" IsNewNode="True" />
+        <ColumnInfo Id="OrderOperation" PropertyName="OrderOperation" Width="70" Index="5" IsNewNode="True" />
+      </Columns>
+      <Filters IsNewNode="True">
+        <Filter Id="qty&lt;50" Caption="наименование фильтра1" Criteria="[Qty] &lt; 50.0m" ToolTip="Количество меньше 50" IsNewNode="True" />
+      </Filters>
+    </ListView>
+    <DetailView Id="OrderOperation_DetailView">
+      <Items>
+        <PropertyEditor Id="MaterialOrders" DataSourceCriteria="[Number] &lt; 7" DataSourceCriteriaProperty="" LookupProperty="" DataSourceProperty="" />
+      </Items>
+    </DetailView>
+  </Views>
+</Application>

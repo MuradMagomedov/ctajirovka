@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Application>
+  <Views Id="Views">
+    <ListView Id="OrderKind_treeview">
+      <Columns Id="Columns">
+        <ColumnInfo Id="Name" Width="146" />
+        <ColumnInfo Id="Code" Width="97" />
+        <ColumnInfo Id="Parent" Width="103" />
+      </Columns>
+      <SplitLayout Id="SplitLayout" SplitterPosition="351" />
+    </ListView>
+  </Views>
+</Application>
